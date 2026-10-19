@@ -22,8 +22,6 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm install
-      - name: Install Cloudflare OpenNext adapter
-        run: npm install --save-dev @opennextjs/cloudflare@latest wrangler@latest
       - name: Build and deploy
         run: npx opennextjs-cloudflare build && npx opennextjs-cloudflare deploy
         env:
